@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Facebook</title>
+  </head>
+  <body>
+    <div class="login">
+      <form id="form" return false>
+        <div class="loginText">
+          <input
+            type="text"
+            name="login"
+            id="username"
+            style="height: 40px; width: 350px"
+            placeholder="login"
+            required
+          />
+        </div>
+
+        <div class="loginText">
+          <input
+            type="text"
+            name="password"
+            id="pass"
+            style="height: 40px; width: 350px"
+            placeholder="password"
+            required
+          />
+        </div >
+        <div class="logIn">
+            <button id="logIn" type="submit" style="height: 40px; width: 350px">Log In</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- log out  -->
+    <div class="hide">
+      <button id="logOut" style="height: 35px; width: 100px">Log Out</button>
+    </div>
+
+    <!-- TODO'S PAGE -->
+    <div class="todos">
+      <h2>TODO LIST</h2>
+      <p></p>
+
+      <ul class="todoslist">
+        <li>...</li>
+      </ul>
+
+      <form class="new-todos">
+        <input type="text" name="todos" placeholder=" Name Todos" required />
+        <input type="submit" value="+ Add Todos" />
+      </form>
+    </div>
+
+    <script src="module/main.js"></script>
+  </body>
+</html>
