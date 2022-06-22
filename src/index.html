@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Facebook</title>
+  </head>
+  <body>
+    <!-- Login -->
+    <div id="loginContainer" class="login-wrapper hide">
+      <div class="login">
+        <form id="form">
+          <div class="loginText">
+            <input
+              type="text"
+              name="login"
+              id="username"
+              placeholder="login"
+              required
+              class="input"
+            />
+          </div>
+
+          <div class="loginText">
+            <input
+              type="text"
+              name="password"
+              id="pass"
+              placeholder="password"
+              required
+              class="input"
+            />
+          </div>
+          <div class="logIn">
+            <button class="login-button" id="logIn" type="submit">
+              Log In
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- Logout button -->
+    <div class="logout-wrapper">
+      <button id="logoutButton" class="logoutButton">Log Out</button>
+    </div>
+    <!-- TODO'S PAGE -->
+
+    <div id="todosContainer" class="todos hide">
+      <h2>TODO LIST</h2>
+      <p></p>
+
+      <ul class="todoslist">
+        <li>...</li>
+      </ul>
+
+      <form class="new-todos">
+        <input
+          class="nametodos"
+          type="text"
+          name="todos"
+          placeholder=" Name Todos"
+          required
+        />
+        <input class="addtodos" type="submit" value="+ Add Todos" />
+      </form>
+    </div>
+    <!-- thems -->
+    <button id="dark-theme-button" class="dark-theme">Dark Mode</button>
+    <script type="module" src="module/main.js"></script>
+  </body>
+</html>
