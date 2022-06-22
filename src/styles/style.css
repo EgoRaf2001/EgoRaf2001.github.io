@@ -1,29 +1,27 @@
+:root,
+html[data-theme="light"] {
+  --background-color-container: #000;
+  --background-color: #fff;
+  --text-color: #000;
+  --text-color-accent: #fff;
+  --border-color: #b4b4b4;
+  --border-color-hover: #b8b8b8;
+}
+
+html[data-theme="dark"] {
+  --background-color-container: #fff;
+  --background-color: #000;
+  --text-color: #fff;
+  --text-color-accent: #000;
+  --border-color: #1d1c1c;
+  --border-color-hover: #eeeeee;
+}
+
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #bacedaf5;
+  background-color: var(--background-color);
+  color: var(--text-color);
   transition: all 0.3s linear;
-}
-body.dark {
-  background-color: rgb(49, 48, 48);
-  color: #fff;
-}
-.dark-theme {
-  position: absolute;
-  bottom: 3;
-  font-family: "Roboto", sans-serif;
-  font-size: 12px;
-  padding: 12px;
-  width: 100px;
-  cursor: pointer;
-  background-color: #383838;
-  border: 1px solid #4c4c4c;
-  color: #fff;
-  border-radius: 100px;
-  transition: all 0.3s linear;
-}
-.dark-theme:hover {
-  background-color: #4c4c4c;
-  border-color: #383838;
 }
 
 /* login */
@@ -37,8 +35,8 @@ body.dark {
   padding: 30px;
   max-width: 400px;
   width: 100%;
-  background: #212121;
-  box-shadow: 0 0 0 10px rgb(0 0 0 / 10%);
+  background: var(--background-color-container);
+  box-shadow: 0 0 0 10px var(--background-color);
   text-align: center;
   border-radius: 50px;
 }
@@ -51,37 +49,16 @@ body.dark {
   width: 100%;
   height: 30px;
   appearance: none;
-  border: 3px solid #eee;
+  border: 3px solid var(--border-color);
   line-height: 1;
   border-radius: 4px;
   padding: 4px;
 }
 
-.input:focus {
-  outline: none;
-  border-color: #8589b9;
-}
-
+.input:focus,
 .input:hover {
-  border-color: #0b18b9;
-}
-
-.login-button {
-  font-family: "Roboto", sans-serif;
-  font-size: 12px;
-  padding: 12px;
-  width: 100px;
-  cursor: pointer;
-  background-color: #383838;
-  border: 1px solid #4c4c4c;
-  color: #fff;
-  border-radius: 30px;
-  transition: all 0.3s linear;
-}
-
-.login-button:hover {
-  background-color: #4c4c4c;
-  border-color: #383838;
+  outline: none;
+  border-color: var(--border-color-hover);
 }
 /* Logout */
 .logout-wrapper {
@@ -94,18 +71,19 @@ body.dark {
   padding: 12px;
   width: 100px;
   cursor: pointer;
-  background-color: #383838;
-  border: 1px solid #4c4c4c;
-  color: #fff;
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
   border-radius: 30px;
   transition: all 0.3s linear;
   display: block;
   margin-top: 0em;
 }
 .logoutButton:hover {
-  background-color: #4c4c4c;
-  border-color: #383838;
+  background-color: var(--background-color);
+  border-color: var(--border-color-hover);
 }
+
 /* TODO'S PAGE  */
 .todos {
   border-radius: 50px;
@@ -113,8 +91,8 @@ body.dark {
   align-items: center;
   text-align: center;
   padding: 20px;
-  background: rgb(159, 161, 160);
-  box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+  background: var(--background-color-container);
+  box-shadow: 0 0 0 10px var(--text-color);
   white-space: nowrap;
   margin: auto;
   position: fixed;
@@ -123,6 +101,10 @@ body.dark {
   transform: translate(-50%, -50%);
   max-width: 350px;
   width: 100%;
+}
+
+.todos h2 {
+  color: var(--text-color-accent);
 }
 
 *,
@@ -145,7 +127,7 @@ h2 {
 }
 
 .todoslist li {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid var(--text-color);
   padding: 10px 0;
   font-weight: 100;
   display: flex;
@@ -154,6 +136,7 @@ h2 {
 .todoslist label {
   flex: 1;
   cursor: pointer;
+  color: var(--text-color-accent);
 }
 
 .todoslist input {
@@ -172,12 +155,13 @@ h2 {
 .new-todos {
   margin-top: 20px;
   width: 100%;
+  display: flex;
 }
 
 .new-todos input {
   padding: 12px;
   outline: 0;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border-color);
   width: 100%;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
@@ -185,19 +169,25 @@ h2 {
 .nametodos {
   max-width: 200px;
 }
-.addtodos {
-  cursor: pointer;
-  background-color: #383838;
-  color: #fff;
-  border-radius: 30px;
-  transition: all 0.3s linear;
-  max-width: 100px;
-}
-.addtodos:hover {
-  background-color: #4c4c4c;
-  border-color: #383838;
-}
 
 .hide {
   display: none;
+}
+
+.button {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  padding: 12px;
+  width: 100px;
+  cursor: pointer;
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  border-radius: 30px;
+  transition: all 0.3s linear;
+}
+
+.button:hover {
+  background-color: var(--background-color);
+  border-color: var(--border-color-hover);
 }
