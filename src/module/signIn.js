@@ -90,3 +90,4 @@ logOutButton.addEventListener("click", function () {
 window.addEventListener("load", function () {
   renderPage();
 });
+
