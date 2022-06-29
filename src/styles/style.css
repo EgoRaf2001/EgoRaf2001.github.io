@@ -1,8 +1,8 @@
 :root,
 html[data-theme="light"] {
-  --background-color-container: #000;
+  --background-color-container: rgb(53, 54, 58);
   --background-color: #fff;
-  --text-color: #000;
+  --text-color: rgb(53, 54, 58);
   --text-color-accent: #fff;
   --border-color: #b4b4b4;
   --border-color-hover: #b8b8b8;
@@ -10,10 +10,10 @@ html[data-theme="light"] {
 
 html[data-theme="dark"] {
   --background-color-container: #fff;
-  --background-color: #000;
+  --background-color: rgb(53, 54, 58);
   --text-color: #fff;
-  --text-color-accent: #000;
-  --border-color: #1d1c1c;
+  --text-color-accent: rgb(53, 54, 58);
+  --border-color: rgb(53, 54, 58);
   --border-color-hover: #eeeeee;
 }
 
