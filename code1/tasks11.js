@@ -154,14 +154,14 @@ console.log(countLettersInWord("Ani")); // 3 letters in word Edgar
 // -------------------------------------------
 
 function findDuplicatesInArray(arr) {
-  const apo = [];
+  const duplicates = [];
   for (i = 0; i < arr.length; i++) {
     for (j = 0; j < arr.length; j++)
-      if (arr[i] === arr[j] && i !== j && !apo.includes(arr[i])) {
-        apo.push(arr[i]);
+      if (arr[i] === arr[j] && i !== j && ! duplicates.includes(arr[i])) {
+        duplicates.push(arr[i]);
       }
   }
-  return apo;
+  return  duplicates;
 }
 
 const arrayWithDuplicates = [4, 2, 34, 4, 1, 12, 1, 4];
