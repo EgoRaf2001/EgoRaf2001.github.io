@@ -4,76 +4,70 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap"
-      rel="stylesheet"
-    />
-    <title>Facebook</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <!-- Login -->
-    <div id="loginContainer" class="login-wrapper hide">
-      <div class="login">
-        <form id="form">
-          <div class="loginText">
-            <input
-              type="text"
-              name="login"
-              id="username"
-              placeholder="login"
-              required
-              class="input"
-            />
-          </div>
-
-          <div class="loginText">
-            <input
-              type="text"
-              name="password"
-              id="pass"
-              placeholder="password"
-              required
-              class="input"
-            />
-          </div>
-          <div class="logIn">
-            <button class="button" id="logIn" type="submit">Log In</button>
-          </div>
-        </form>
-      </div>
+    <!-- add new user button -->
+    <div class="adduser-wrapper">
+      <button id="addUser" class="add-user">Add New User</button>
     </div>
-    <!-- Logout button -->
-    <div class="logout-wrapper">
-      <button id="logoutButton" class="button">Log Out</button>
+    <!-- table  -->
+    <div class="table-wrapper">
+      <table class="table">
+      </table>
     </div>
-    <!-- TODO'S PAGE -->
-
-    <div id="todosContainer" class="todos hide">
-      <h2>TODO LIST</h2>
-      <p></p>
-
-      <ul class="todoslist">
-        <li>...</li>
-      </ul>
-
-      <form class="new-todos">
+    <!-- dialog -->
+    <div class="dialog-wrapper">
+      <dialog id="dialog" class="dialog hide">
+        <h1>Create New User</h1>
+        <form class="new-data">
         <input
-          class="nametodos"
           type="text"
-          name="todos"
-          placeholder=" Name Todos"
+          name="firstName"
+          id="username"
+          placeholder="First Name"
           required
+          class="input"
+        />
+        <input
+          type="text"
+          name="lastName"
+          id="username"
+          placeholder="Last Name"
+          required
+          class="input"
+        />
+        <input
+          type="text"
+          name="email"
+          id="username"
+          placeholder="Email"
+          required
+          class="input"
+        />
+        <input
+          type="text"
+          name="age"
+          id="username"
+          placeholder="Age"
+          required
+          class="input"
+        />
+        <input
+          type="text"
+          name="phoneNumber"
+          id="username"
+          placeholder="Phone Number"
+          required
+          class="input"
         />
 
-        <button class="addtodos button" type="submit">+ Add Todos</button>
-      </form>
+          <button id="addUser-Table" class="create-user">Add New User</button>
+        </form>
+      </dialog>
     </div>
-    <!-- thems -->
-    <button id="dark-theme-button" class="button">Dark Mode</button>
-
-    <script type="module" src="module/main.js"></script>
+    <script type="module" src="module/index.js"></script>
   </body>
 </html>
